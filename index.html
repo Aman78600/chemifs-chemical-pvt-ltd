@@ -76,11 +76,105 @@
             background-size: 300% 300%;
             animation: gradient-move 3s ease-in-out infinite;
         }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+        .loader-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .loader-ring:nth-child(2) {
+            border-top-color: #60a5fa;
+            animation-delay: -0.5s;
+        }
+
+        .loader-ring:nth-child(3) {
+            border-top-color: #34d399;
+            animation-delay: -1s;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .loader-dots {
+            display: inline-block;
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% {
+                content: '.';
+            }
+            40% {
+                content: '..';
+            }
+            60%, 100% {
+                content: '...';
+            }
+        }
     </style>
 
 </head>
 
 <body class="font-['Poppins'] text-gray-800">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-text">
+                LOADING<span class="loader-dots">...</span>
+            </div>
+        </div>
+    </div>
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
@@ -1108,172 +1202,186 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-700 py-20 flex items-center relative overflow-hidden">
+    <section id="contact" class="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-700 py-12 md:py-20 flex items-center relative overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
         </div>
         
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-white" data-aos="fade-up">Get In Touch</h2>
-            <p class="text-center text-blue-100 text-xl mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 w-full">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 md:mb-4 text-white" data-aos="fade-up">Get In Touch</h2>
+            <p class="text-center text-blue-100 text-base sm:text-lg md:text-xl mb-8 md:mb-12 lg:mb-16 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
                 Let's discuss how we can help with your chemical requirements
             </p>
             
-            <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-7xl mx-auto">
                 <!-- Contact Information Card -->
-                <div data-aos="fade-right" data-aos-delay="200">
-                    <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 h-full">
-                        <h3 class="text-3xl font-bold mb-8 text-gray-900 flex items-center">
-                            <svg class="w-10 h-10 mr-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div data-aos="fade-right" data-aos-delay="200" class="w-full">
+                    <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10 h-full">
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 lg:mb-8 text-gray-900 flex flex-col sm:flex-row items-start sm:items-center">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 mb-2 sm:mb-0 sm:mr-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
-                            Contact Information
+                            <span>Contact Information</span>
                         </h3>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-4 md:space-y-6">
                             <!-- Admin Office -->
-                            <div class="group hover:bg-blue-50 p-5 rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300">
-                                            <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="group hover:bg-blue-50 p-3 sm:p-4 md:p-5 rounded-xl md:rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
+                                <div class="flex flex-col sm:flex-row items-start">
+                                    <div class="flex-shrink-0 mb-2 sm:mb-0">
+                                        <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg md:rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="ml-4">
-                                        <p class="font-bold text-lg text-gray-900 mb-1">Admin Office</p>
-                                        <p class="text-gray-600 leading-relaxed">Plot no. 1313 1314, NCWI/Zone, Sarigam, Dis. Valsad, Gujarat - 396155</p>
+                                    <div class="sm:ml-3 md:ml-4">
+                                        <p class="font-bold text-base md:text-lg text-gray-900 mb-1">Admin Office</p>
+                                        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Plot no. 1313 1314, NCWI/Zone, Sarigam, Dis. Valsad, Gujarat - 396155</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Registered Office -->
-                            <div class="group hover:bg-blue-50 p-5 rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center group-hover:bg-green-600 transition-all duration-300">
-                                            <svg class="w-6 h-6 text-green-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="group hover:bg-blue-50 p-3 sm:p-4 md:p-5 rounded-xl md:rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
+                                <div class="flex flex-col sm:flex-row items-start">
+                                    <div class="flex-shrink-0 mb-2 sm:mb-0">
+                                        <div class="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-lg md:rounded-xl flex items-center justify-center group-hover:bg-green-600 transition-all duration-300">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="ml-4">
-                                        <p class="font-bold text-lg text-gray-900 mb-1">Registered Office</p>
-                                        <p class="text-gray-600 leading-relaxed">203, Platinum CHS Limited, Nears Brand Factory, Mira Bhayander Road, Mira Road, Thane, Mumbai 401107</p>
+                                    <div class="sm:ml-3 md:ml-4">
+                                        <p class="font-bold text-base md:text-lg text-gray-900 mb-1">Registered Office</p>
+                                        <p class="text-sm md:text-base text-gray-600 leading-relaxed">203, Platinum CHS Limited, Nears Brand Factory, Mira Bhayander Road, Mira Road, Thane, Mumbai 401107</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Email -->
-                            <div class="group hover:bg-blue-50 p-5 rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-all duration-300">
-                                            <svg class="w-6 h-6 text-purple-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="group hover:bg-blue-50 p-3 sm:p-4 md:p-5 rounded-xl md:rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
+                                <div class="flex flex-col sm:flex-row items-start">
+                                    <div class="flex-shrink-0 mb-2 sm:mb-0">
+                                        <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-lg md:rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-all duration-300">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-purple-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="ml-4">
-                                        <p class="font-bold text-lg text-gray-900 mb-2">Email</p>
+                                    <div class="sm:ml-3 md:ml-4 min-w-0 flex-1">
+                                        <p class="font-bold text-base md:text-lg text-gray-900 mb-2">Email</p>
                                         <div class="space-y-1">
-                                            <a href="mailto:info@chemifs.com" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">info@chemifs.com</a>
-                                            <a href="mailto:chemifschemical@gmail.com" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">chemifschemical@gmail.com</a>
-                                            <a href="mailto:accounts@chemifs.com" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">accounts@chemifs.com</a>
+                                            <a href="mailto:info@chemifs.com" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors break-all">info@chemifs.com</a>
+                                            <a href="mailto:chemifschemical@gmail.com" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors break-all">chemifschemical@gmail.com</a>
+                                            <a href="mailto:accounts@chemifs.com" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors break-all">accounts@chemifs.com</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Phone -->
-                            <div class="group hover:bg-blue-50 p-5 rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-600 transition-all duration-300">
-                                            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="group hover:bg-blue-50 p-3 sm:p-4 md:p-5 rounded-xl md:rounded-2xl transition-all duration-300 border-l-4 border-transparent hover:border-blue-600">
+                                <div class="flex flex-col sm:flex-row items-start">
+                                    <div class="flex-shrink-0 mb-2 sm:mb-0">
+                                        <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg md:rounded-xl flex items-center justify-center group-hover:bg-orange-600 transition-all duration-300">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-orange-600 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="ml-4">
-                                        <p class="font-bold text-lg text-gray-900 mb-2">Phone</p>
+                                    <div class="sm:ml-3 md:ml-4">
+                                        <p class="font-bold text-base md:text-lg text-gray-900 mb-2">Phone</p>
                                         <div class="space-y-1">
-                                            <a href="tel:+918511822770" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 85118 22770</a>
-                                            <a href="tel:+917984664125" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 79846 64125</a>
-                                            <a href="tel:+919023616682" class="block text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 90236 16682</a>
+                                            <a href="tel:+918511822770" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 85118 22770</a>
+                                            <a href="tel:+917984664125" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 79846 64125</a>
+                                            <a href="tel:+919023616682" class="block text-sm md:text-base text-blue-600 hover:text-blue-800 font-medium transition-colors">+91 90236 16682</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                       
+                        <!-- Map -->
+                        <div class="mt-6 md:mt-8 rounded-xl md:rounded-2xl overflow-hidden shadow-xl border-2 md:border-4 border-gray-100">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4419.687499157756!2d72.85130773301951!3d20.285792835512645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d3b8fac581cb%3A0x148af27846b68c14!2sCHEMIFS%20CHEMICALS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1760164302819!5m2!1sen!2sin" 
+                                class="w-full h-48 sm:h-56 md:h-64 lg:h-80" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Contact Form Card -->
-                <div data-aos="fade-left" data-aos-delay="400">
-                    <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 h-full">
-                        <h3 class="text-3xl font-bold mb-8 text-gray-900 flex items-center">
-                            <svg class="w-10 h-10 mr-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div data-aos="fade-left" data-aos-delay="400" class="w-full">
+                    <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10 h-full">
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 lg:mb-8 text-gray-900 flex flex-col sm:flex-row items-start sm:items-center">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 mb-2 sm:mb-0 sm:mr-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                             </svg>
-                            Send Us a Message
+                            <span>Send Us a Message</span>
                         </h3>
-                        <form id="contact-form" class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
+                        <form id="contact-form" class="space-y-4 md:space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
                                 <div class="group">
-                                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                    <label for="name" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                                     <input type="text" id="name" name="name" required
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
+                                        class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
                                 </div>
                                 <div class="group">
-                                    <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">Company Name</label>
+                                    <label for="company" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Company Name</label>
                                     <input type="text" id="company" name="company"
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
+                                        class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
                                 </div>
                             </div>
-                            <div class="grid md:grid-cols-2 gap-6">
+                            <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
                                 <div class="group">
-                                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                                    <label for="email" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
                                     <input type="email" id="email" name="email" required
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
+                                        class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
                                 </div>
                                 <div class="group">
-                                    <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                    <label for="phone" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
                                     <input type="tel" id="phone" name="phone" required
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
+                                        class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
                                 </div>
                             </div>
                             <div class="group">
-                                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
+                                <label for="subject" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Subject</label>
                                 <input type="text" id="subject" name="subject"
-                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
+                                    class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none">
                             </div>
                             <div class="group">
-                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
-                                <textarea id="message" name="message" rows="5" required
-                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none resize-none"></textarea>
+                                <label for="message" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 outline-none resize-none"></textarea>
                             </div>
                             <button type="submit"
-                                class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group">
+                                class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group">
                                 <span>Send Message</span>
-                                <svg class="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </button>
                         </form>
                     </div>
                 </div>
-                 <!-- Map -->
-                        
             </div>
-            <div class="mt-8 rounded-2xl overflow-hidden shadow-xl border-4 border-gray-100">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4419.687499157756!2d72.85130773301951!3d20.285792835512645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d3b8fac581cb%3A0x148af27846b68c14!2sCHEMIFS%20CHEMICALS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1760164302819!5m2!1sen!2sin"  style="border:0;height: 600px;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+                            </div>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -1283,6 +1391,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
     <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('fade-out');
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000); // Adjust delay as needed (1000ms = 1 second)
+        });
+
         // Contact section toggle
         document.addEventListener('DOMContentLoaded', function () {
             var btn = document.getElementById('contact-toggle');
@@ -1339,7 +1458,7 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
-            
+
     </script>
 </body>
 
