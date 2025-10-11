@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Chemifs Chemical Pvt Ltd</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- MailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="input.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Amiri", serif;
+        }
+
+        @keyframes gradient-move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(120deg, #a21caf, #f472b6, #facc15, #a21caf);
+            background-size: 300% 300%;
+            animation: gradient-move 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="font-['Poppins'] text-gray-800">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Contact Header -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-white mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-700 via-fuchsia-600 to-yellow-400 bg-clip-text text-transparent"
+                data-aos="fade-up">
+                Get In Touch With Us
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Have questions about our products or services? We're here to help. Reach out to us using the form below
+                or contact us directly.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-2xl p-8 border border-blue-100 h-full">
+                        <h2 class="text-3xl font-extrabold mb-8 flex items-center tracking-wider text-blue-900 drop-shadow-lg border-b-4 border-blue-200 pb-4">
+                            <svg class="w-9 h-9 mr-4 text-blue-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m13-3.13V7a4 4 0 00-3-3.87M5 10V7a4 4 0 013-3.87" />
+                            </svg>
+                            <span class="pl-2">Contact Information</span>
+                        </h2>
+
+                        <!-- Admin Office -->
+                        <div class="mb-8 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start mb-3">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-800 mb-2">Admin Office</h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Plot no. 1313 1314, NCWI/Zone,<br>
+                                        Sarigam, Dis. Valsad,<br>
+                                        Gujarat - 396155
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Registered Office -->
+                        <div class="mb-8 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start mb-3">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-800 mb-2">Registered Office</h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        203, Platinum CHS Limited,<br>
+                                        Nears Brand Factory, Mira Bhayander Road,<br>
+                                        Mira Road, Thane, Mumbai 401107
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-8 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start mb-3">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-800 mb-2">Email</h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        <a href="mailto:info@chemifs.com"
+                                            class="text-blue-600 hover:underline block">info@chemifs.com</a>
+                                        <a href="mailto:chemifschemical@gmail.com"
+                                            class="text-blue-600 hover:underline block">chemifschemical@gmail.com</a>
+                                        <a href="mailto:accounts@chemifs.com"
+                                            class="text-blue-600 hover:underline block">accounts@chemifs.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-8 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start mb-3">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-800 mb-2">Phone</h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        <a href="tel:+918511822770"
+                                            class="text-blue-600 hover:underline block">+91 85118 22770</a>
+                                        <a href="tel:+917984664125"
+                                            class="text-blue-600 hover:underline block">+91 79846 64125</a>
+                                        <a href="tel:+919023616682"
+                                            class="text-blue-600 hover:underline block">+91 90236 16682</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start mb-3">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-800 mb-2">Business Hours</h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-blue-100">
+                        <h2 class="text-3xl font-bold mb-6 flex items-center text-blue-900">
+                            <svg class="w-8 h-8 mr-3 text-blue-600" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                            Send Us a Message
+                        </h2>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                        Full Name <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                        placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">
+                                        Company Name
+                                    </label>
+                                    <input type="text" id="company" name="company"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                        placeholder="Your Company">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                                        Email Address <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                        placeholder="john@example.com">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                                        Phone Number <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                        placeholder="+91 98765 43210">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Subject <span class="text-red-600">*</span>
+                                </label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                    placeholder="How can we help you?">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Message <span class="text-red-600">*</span>
+                                </label>
+                                <textarea id="message" name="message" rows="6" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
+                                    placeholder="Tell us more about your inquiry..."></textarea>
+                            </div>
+
+                            <div class="flex items-start">
+                                <input type="checkbox" id="terms" name="terms" required
+                                    class="mt-1 mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label for="terms" class="text-sm text-gray-600">
+                                    I agree to the <a href="#" class="text-blue-600 hover:underline">terms and
+                                        conditions</a> and <a href="#" class="text-blue-600 hover:underline">privacy
+                                        policy</a>. <span class="text-red-600">*</span>
+                                </label>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-blue-600 via-fuchsia-500 to-yellow-400 hover:from-blue-700 hover:via-fuchsia-600 hover:to-yellow-500 text-white px-8 py-4 rounded-lg font-bold shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Success/Error Message -->
+                        <div id="form-message" class="mt-6 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
+                Find Us on Map
+            </h2>
+            <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200" data-aos="fade-up"
+                data-aos-delay="200">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4419.687499157756!2d72.85130773301951!3d20.285792835512645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d3b8fac581cb%3A0x148af27846b68c14!2sCHEMIFS%20CHEMICALS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1760164302819!5m2!1sen!2sin"  style="border:0;height: 600px;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 via-fuchsia-500 to-yellow-400">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
+                Ready to Work With Us?
+            </h2>
+            <p class="text-lg text-white mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Let's discuss how our chemical solutions can benefit your business. Contact us today for a consultation
+                or quote.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="tel:+918511822770"
+                    class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Call Us Now
+                </a>
+                <a href="mailto:info@chemifs.com"
+                    class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+ <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Add mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+               
+            });
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Show loading state
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mr-2 inline-block" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate sending (you can integrate with EmailJS or backend API here)
+            setTimeout(() => {
+                // Show success message
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.className = 'mt-6 bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg';
+                messageDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <strong>Thank you for contacting us!</strong>
+                            <p>We have received your message and will get back to you shortly.</p>
+                        </div>
+                    </div>
+                `;
+                messageDiv.classList.remove('hidden');
+
+                // Reset form
+                e.target.reset();
+
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

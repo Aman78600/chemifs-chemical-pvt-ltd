@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product Details - Chemifs Chemical Pvt Ltd</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="input.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Amiri", serif;
+        }
+    </style>
+</head>
+
+<body class="font-['Poppins'] text-gray-800">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Product Details Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-white mt-8">
+        <div class="container mx-auto px-4">
+            <div id="product-content">
+                <!-- Loading indicator -->
+                <div class="text-center py-20">
+                    <div class="inline-block animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-600"></div>
+                    <p class="mt-4 text-gray-600">Loading product details...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Chemifs</h3>
+                    <p>Inspiring Tomorrow's Solutions Today</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400 transition">Products</a></li>
+                        <li><a href="index.html#applications" class="hover:text-blue-400 transition">Applications</a>
+                        </li>
+                        <li><a href="index.html#certifications" class="hover:text-blue-400 transition">Certifications</a>
+                        </li>
+                        <li><a href="index.html#contact" class="hover:text-blue-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+                    <p>Admin Office: Plot no. 1313 1314, NCWI/Zone, Sarigam, Dis. Valsad, Gujarat - 396155</p>
+                    <p>Phone: +91 85118 22770, +91 79846 64125</p>
+                    <p>Email: info@chemifs.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Add mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+                // Scroll effect for navbar
+                const header = document.getElementById('header');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('bg-white', 'bg-opacity-95', 'shadow-md');
+                        header.classList.remove('bg-opacity-90');
+                    } else {
+                        header.classList.remove('bg-white', 'bg-opacity-95', 'shadow-md');
+                        header.classList.add('bg-opacity-90');
+                    }
+                });
+            });
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (!productId) {
+            document.getElementById('product-content').innerHTML = `
+                <div class="text-center py-20">
+                    <h2 class="text-3xl font-bold text-red-600 mb-4">Product Not Found</h2>
+                    <p class="text-gray-600 mb-6">The product you are looking for does not exist.</p>
+                    <a href="products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        View All Products
+                    </a>
+                </div>
+            `;
+        } else {
+            // Load product details from JSON
+            fetch('products-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const product = data.products.find(p => p.id === productId);
+
+                    if (!product) {
+                        document.getElementById('product-content').innerHTML = `
+                            <div class="text-center py-20">
+                                <h2 class="text-3xl font-bold text-red-600 mb-4">Product Not Found</h2>
+                                <p class="text-gray-600 mb-6">The product you are looking for does not exist.</p>
+                                <a href="products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                                    View All Products
+                                </a>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    // Update page title
+                    document.getElementById('page-title').textContent = `${product.name} - Chemifs Chemical Pvt Ltd`;
+
+                    // Display product details
+                    const productHTML = `
+                        <!-- Breadcrumb -->
+                        <nav class="mb-8" data-aos="fade-down">
+                            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                                <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                                <li><span class="mx-2">/</span></li>
+                                <li><a href="products.html" class="hover:text-blue-600">Products</a></li>
+                                <li><span class="mx-2">/</span></li>
+                                <li class="text-blue-600 font-semibold">${product.name}</li>
+                            </ol>
+                        </nav>
+
+                        <!-- Product Header -->
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos="fade-up">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <!-- Product Image -->
+                                <div class="flex items-center justify-center">
+                                    <img src="${product.image}" alt="${product.name}" 
+                                         class="w-full max-w-md h-auto object-contain rounded-lg shadow-lg">
+                                </div>
+                                
+                                <!-- Product Info -->
+                                <div>
+                                    <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-700 via-fuchsia-600 to-yellow-400 bg-clip-text text-transparent">
+                                        ${product.name}
+                                    </h1>
+                                    <p class="text-2xl text-gray-600 mb-6">${product.formula}</p>
+                                    <p class="text-lg text-gray-700 mb-6">${product.fullDescription}</p>
+                                    
+                                    <!-- Product Specifications -->
+                                    <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Specifications</h3>
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <span class="font-semibold text-gray-700">Purity:</span>
+                                                <p class="text-gray-600">${product.purity}</p>
+                                            </div>
+                                            <div>
+                                                <span class="font-semibold text-gray-700">Grade:</span>
+                                                <p class="text-gray-600">${product.grade}</p>
+                                            </div>
+                                            <div class="col-span-2">
+                                                <span class="font-semibold text-gray-700">Packaging:</span>
+                                                <p class="text-gray-600">${product.packaging}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact Button -->
+                                    <a href="index.html#contact" 
+                                       class="inline-block bg-gradient-to-r from-blue-600 via-fuchsia-500 to-yellow-400 hover:from-blue-700 hover:via-fuchsia-600 hover:to-yellow-500 text-white px-8 py-3 rounded-full text-lg font-bold shadow-xl transition-all duration-300 transform hover:scale-105">
+                                        Request Quote
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Applications Section -->
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                                <svg class="inline-block w-8 h-8 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                                    </path>
+                                </svg>
+                                Applications
+                            </h2>
+                            <ul class="grid md:grid-cols-2 gap-4">
+                                ${product.applications.map(app => `
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-700">${app}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <!-- Industries Section -->
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="400">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                                <svg class="inline-block w-8 h-8 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                                Industries We Serve
+                            </h2>
+                            <div class="flex flex-wrap gap-3">
+                                ${product.industries.map(industry => `
+                                    <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 px-4 py-2 rounded-full font-semibold shadow-md">
+                                        ${industry}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Additional Specifications -->
+                        ${product.specifications ? `
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="600">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                                <svg class="inline-block w-8 h-8 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                                Additional Specifications
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                ${Object.entries(product.specifications).map(([key, value]) => `
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <span class="font-semibold text-gray-700 capitalize">${key.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                                        <p class="text-gray-600">${value}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+
+                        <!-- Back to Products Button -->
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="800">
+                            <a href="products.html" 
+                               class="inline-block bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300">
+                                <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                                </svg>
+                                Back to All Products
+                            </a>
+                        </div>
+                    `;
+
+                    document.getElementById('product-content').innerHTML = productHTML;
+                    AOS.refresh();
+                })
+                .catch(error => {
+                    console.error('Error loading product details:', error);
+                    document.getElementById('product-content').innerHTML = `
+                        <div class="text-center py-20">
+                            <h2 class="text-3xl font-bold text-red-600 mb-4">Error Loading Product</h2>
+                            <p class="text-gray-600 mb-6">There was an error loading the product details. Please try again later.</p>
+                            <a href="products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                                View All Products
+                            </a>
+                        </div>
+                    `;
+                });
+        }
+    </script>
+</body>
+
+</html>

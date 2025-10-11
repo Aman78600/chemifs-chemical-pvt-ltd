@@ -1,0 +1,432 @@
+{
+  "products": [
+    {
+      "id": "ammonium-sulphate",
+      "name": "Ammonium Sulphate",
+      "formula": "(NH₄)₂SO₄",
+      "image": "assets/images/prodcuts/AMMONIUM_SULPHATE.png",
+      "purity": "21% nitrogen, 24% sulphur",
+      "grade": "Agricultural/Industrial",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "Salt with inorganic commercial uses, primarily as soil fertilizer",
+      "fullDescription": "Ammonium sulphate (NH4)2SO4 is Salt with a an inorganic number of commercial uses. The most common use is as a soil fertilize(It contains 21% nitrogen and 24% Sulphur), food activities treatment of drinking water, etc.",
+      "applications": [
+        "Soil fertilizer (21% nitrogen and 24% sulphur)",
+        "Food activities treatment",
+        "Drinking water treatment"
+      ],
+      "industries": ["Agriculture", "Water Treatment", "Food Processing"],
+      "specifications": {
+        "appearance": "White crystalline powder",
+        "solubility": "High water solubility",
+        "grade": "Agricultural/Industrial"
+      }
+    },
+    {
+      "id": "sodium-sulphate",
+      "name": "Sodium Sulphate",
+      "formula": "Na₂SO₄",
+      "image": "assets/images/prodcuts/SODIUM_SULPHATE.png",
+      "purity": "99%",
+      "grade": "Anhydrous",
+      "packaging": "50kg Bags",
+      "shortDescription": "White solids highly soluble in water, major commodity chemical product",
+      "fullDescription": "Sodium sulfate (also known as sodium sulphate or sulfate of soda) is the inorganic compound with formula Na2SO4 as well as several related hydrates. All forms are white solids that are highly soluble in water. With an annual production of 6 million tonnes, the decahydrate is a major commodity chemical product. It is mainly used as a filler in the manufacture of powdered home laundry detergents and making highly alkaline sulfides. It is commonly used in the Kraft process of paper pulping for making highly alkaline sulfides, and used in Glassmaking, Textiles, Food Industry, etc.",
+      "applications": [
+        "Filler in powdered home laundry detergents",
+        "Making highly alkaline sulfides",
+        "Kraft process of paper pulping",
+        "Glassmaking",
+        "Textiles",
+        "Food Industry"
+      ],
+      "industries": ["Detergent Manufacturing", "Paper & Pulp", "Glass", "Textile", "Food"],
+      "specifications": {
+        "appearance": "White crystalline solid",
+        "solubility": "Highly soluble in water",
+        "production": "6 million tonnes annually"
+      }
+    },
+    {
+      "id": "magnesium-sulphate",
+      "name": "Magnesium Sulphate",
+      "formula": "MgSO₄",
+      "image": "assets/images/prodcuts/MAGNESIUM_SULPHATE.png",
+      "purity": "98%",
+      "grade": "Heptahydrate (Epsom Salt)",
+      "packaging": "50kg Bags",
+      "shortDescription": "Chemical compound commonly encountered as Epsom salt, used in medical and agricultural applications",
+      "fullDescription": "Magnesium sulfate (MgSO4) is a chemical compound containing magnesium, sulfur and oxygen. It is commonly encountered as the heptahydrate sulfate mineral epsomite (MgSO4·7H2O), commonly called Epsom salt. The small colorless crystalline powder is used as an anticonvulsant, a cathartic, and an electrolyte replenisher in the treatment of pre-eclampsia and eclampsia. It can be used as a laxative and as an anticonvulsant. It is also used in fertilizers, as a brewing salt in beer production, and in the manufacture of tofu.",
+      "applications": [
+        "Anticonvulsant",
+        "Cathartic and electrolyte replenisher",
+        "Treatment of pre-eclampsia and eclampsia",
+        "Laxative",
+        "Fertilizers",
+        "Brewing salt in beer production",
+        "Manufacture of tofu"
+      ],
+      "industries": ["Medical", "Agriculture", "Food & Beverage", "Pharmaceuticals"],
+      "specifications": {
+        "appearance": "Small colorless crystalline powder",
+        "form": "Heptahydrate (MgSO4·7H2O)",
+        "commonName": "Epsom salt"
+      }
+    },
+    {
+      "id": "zinc-sulphate",
+      "name": "Zinc Sulphate",
+      "formula": "ZnSO₄",
+      "image": "assets/images/prodcuts/ZINC_SULPHATE.png",
+      "purity": "98%",
+      "grade": "Heptahydrate",
+      "packaging": "50kg Bags",
+      "shortDescription": "Family of inorganic compounds, historically known as white vitriol",
+      "fullDescription": "Zinc sulfate describes a family of inorganic compounds with the formula ZnSO4·xH2O. All are colorless solids. The most common form includes water of crystallization as the heptahydrate, with the formula ZnSO4·7H2O. As early as the 16th century it was prepared on the large scale, and was historically known as \"white vitriol\"[5] (the name was used, for example, in 1620s by the collective writing under the pseudonym of Basil Valentine). Zinc sulfate and its hydrates are colourless solids. It is commonly used in Manufacturing of rayon, Nutrition, Medicine, floating regent for the mining industries etc.",
+      "applications": [
+        "Manufacturing of rayon",
+        "Nutrition supplements",
+        "Medicine",
+        "Floating reagent for mining industries"
+      ],
+      "industries": ["Textile", "Pharmaceuticals", "Mining", "Nutrition"],
+      "specifications": {
+        "appearance": "Colorless solids",
+        "historicalName": "White vitriol",
+        "commonForm": "Heptahydrate (ZnSO4·7H2O)"
+      }
+    },
+    {
+      "id": "potassium-sulphate",
+      "name": "Potassium Sulphate",
+      "formula": "K₂SO₄",
+      "image": "assets/images/prodcuts/POTASSIUM_SULPHATE.png",
+      "purity": "98%",
+      "grade": "SOP (Sulphate of Potash)",
+      "packaging": "50kg Bags",
+      "shortDescription": "White water-soluble solid providing both potassium and sulfur",
+      "fullDescription": "Potassium sulfate or potassium sulphate also called sulphate of potash (SOP), arcanite, or archaically potash of sulfur, is the inorganic compound with formula K2SO4, a white water-soluble solid. It is commonly used in fertilizers, providing both potassium and sulfur. It is commonly used in fertilizer, manufacturing of glass, soda blasting.",
+      "applications": [
+        "Fertilizers (providing potassium and sulfur)",
+        "Manufacturing of glass",
+        "Soda blasting"
+      ],
+      "industries": ["Agriculture", "Glass Manufacturing", "Industrial Cleaning"],
+      "specifications": {
+        "appearance": "White water-soluble solid",
+        "alternativeNames": ["SOP", "Arcanite", "Potash of sulfur"],
+        "nutrients": "Potassium and sulfur"
+      }
+    },
+    {
+      "id": "ferrous-sulphate",
+      "name": "Ferrous Sulphate",
+      "formula": "FeSO₄",
+      "image": "assets/images/prodcuts/FERROUS_SULPHATE.png",
+      "purity": "98%",
+      "grade": "Heptahydrate",
+      "packaging": "50kg Bags",
+      "shortDescription": "Type of iron used in pharmaceutical and medical applications",
+      "fullDescription": "Ferrous sulfate is a type of iron. You normally get iron from the foods you eat. In your body, iron becomes a part of your hemoglobin and myoglobin. Hemoglobin carries oxygen through your blood to tissues and organs. Myoglobin helps your muscle cells store oxygen. It is commonly used in Pharma industries.",
+      "applications": [
+        "Iron supplementation",
+        "Pharmaceutical applications",
+        "Hemoglobin and myoglobin support",
+        "Water treatment"
+      ],
+      "industries": ["Pharmaceuticals", "Medical", "Water Treatment"],
+      "specifications": {
+        "function": "Iron supplementation",
+        "bodyRole": "Hemoglobin and myoglobin formation",
+        "medicalUse": "Oxygen transport and storage"
+      }
+    },
+    {
+      "id": "calcium-chloride",
+      "name": "Calcium Chloride",
+      "formula": "CaCl₂",
+      "image": "assets/images/prodcuts/CALCIUM_CHLORIDE.png",
+      "purity": "95%",
+      "grade": "Industrial Grade",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "White flakes or pellets, highly soluble in water, used for de-icing and dust control",
+      "fullDescription": "Calcium chloride is an inorganic compound – a salt with the chemical formula CaCl2. It is white flakes or pellets at room temperature, and is highly soluble in water. Calcium chloride desiccants work well over a temperature range from freezing point up to 80 °C or more. Calcium chloride is often used for de-icing or dust control on gravel roads, in food or as the absorbing agent in desiccants. In much of the world, calcium chloride is derived from limestone as a by-product of the Solvay process. Calcium chloride can also be obtained from brine purification.",
+      "applications": [
+        "De-icing roads and walkways",
+        "Dust control on gravel roads",
+        "Food processing",
+        "Desiccant (moisture absorber)",
+        "Brine purification"
+      ],
+      "industries": ["Road Maintenance", "Food Processing", "Chemical Processing"],
+      "specifications": {
+        "appearance": "White flakes or pellets",
+        "temperatureRange": "Freezing point to 80°C+",
+        "solubility": "Highly soluble in water"
+      }
+    },
+    {
+      "id": "ammonium-chloride",
+      "name": "Ammonium Chloride",
+      "formula": "NH₄Cl",
+      "image": "assets/images/prodcuts/AMMONIUM_CHLORIDE.png",
+      "purity": "99%",
+      "grade": "Technical Grade",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "White crystalline salt highly soluble in water, known as sal ammoniac",
+      "fullDescription": "Ammonium chloride is an inorganic chemical compound with the formula NH4Cl and a white crystalline salt that is highly soluble in water. Solutions of ammonium chloride are mildly acidic. In its naturally occurring mineralogic form, it is known as sal ammoniac. The mineral is commonly formed on burning coal dumps from condensation of coal-derived gases. It is also found around some types of volcanic vents. It is mainly used as fertilizer and a flavouring agent in some types of liquorice. It is the product from the reaction of hydrochloric acid and ammonia.",
+      "applications": [
+        "Fertilizer",
+        "Flavoring agent in liquorice",
+        "Industrial processes",
+        "Reaction product of HCl and ammonia"
+      ],
+      "industries": ["Agriculture", "Food Processing", "Chemical Manufacturing"],
+      "specifications": {
+        "appearance": "White crystalline salt",
+        "mineralName": "Sal ammoniac",
+        "pH": "Mildly acidic solutions"
+      }
+    },
+    {
+      "id": "potassium-chloride",
+      "name": "Potassium Chloride",
+      "formula": "KCl",
+      "image": "assets/images/prodcuts/POTASSIUM_CHLORIDE.png",
+      "purity": "99%",
+      "grade": "Fertilizer/Food Grade",
+      "packaging": "50kg Bags",
+      "shortDescription": "Metal halide salt with salt-like taste, used as fertilizer and food additive",
+      "fullDescription": "Potassium chloride (KCl, or potassium salt) is a metal halide salt composed of potassium and chlorine. It is odorless and has a white or colorless vitreous crystal appearance. The solid dissolves readily in water, and its solutions have a salt-like taste. Potassium chloride can be obtained from ancient dried lake deposits. [7] KCl is used as a fertilizer, [8] in medicine, in scientific applications, domestic water softeners (as a substitute for sodium chloride salt), and in food processing, where it may be known as E number additive E508.",
+      "applications": [
+        "Fertilizer",
+        "Medicine",
+        "Scientific applications",
+        "Water softeners (substitute for sodium chloride)",
+        "Food processing (E number additive E508)"
+      ],
+      "industries": ["Agriculture", "Pharmaceuticals", "Food Processing", "Water Treatment"],
+      "specifications": {
+        "appearance": "White or colorless vitreous crystals",
+        "taste": "Salt-like",
+        "eNumber": "E508 (food additive)"
+      }
+    },
+    {
+      "id": "aluminium-chloride",
+      "name": "Aluminium Chloride",
+      "formula": "AlCl₃",
+      "image": "assets/images/prodcuts/ALUMINIUM_CHLORIDE.png",
+      "purity": "98%",
+      "grade": "Anhydrous/Hexahydrate",
+      "packaging": "25kg Bags",
+      "shortDescription": "Inorganic compound forming hexahydrate with water molecules",
+      "fullDescription": "Aluminium chloride, also known as aluminium trichloride, is an inorganic compound with the formula AlCl3. It forms a hexahydrate 3 with the formula [Al(H2O)6]Cl3, containing six water molecules of 2 6 3 hydration. Both the anhydrous form and the hexahydrate are colourless crystals, but samples are often contaminated with iron(III) chloride, giving them a yellow colour.",
+      "applications": [
+        "Catalyst in organic synthesis",
+        "Water treatment coagulant",
+        "Industrial processing"
+      ],
+      "industries": ["Chemical Processing", "Water Treatment", "Pharmaceuticals"],
+      "specifications": {
+        "appearance": "Colorless crystals",
+        "forms": "Anhydrous and hexahydrate",
+        "contamination": "May appear yellow due to iron(III) chloride"
+      }
+    },
+    {
+      "id": "sodium-sulphide",
+      "name": "Sodium Sulphide",
+      "formula": "Na₂S",
+      "image": "assets/images/prodcuts/SODIUM_SULPHIDE.png",
+      "purity": "95%",
+      "grade": "Technical Grade",
+      "packaging": "50kg Bags",
+      "shortDescription": "Chemical compound forming strongly alkaline solutions, emits hydrogen sulfide",
+      "fullDescription": "Sodium sulfide is a chemical compound with the formula Na2S, or more commonly its hydrate Na2S·9H2O. Both the anhydrous and the hydrated salts in pure crystalline form are colorless solids, although technical grades of sodium sulfide are generally yellow to brick red owing to the presence of polysulfides and commonly supplied as a crystalline mass, in flake form, or as a fused solid. They are water-soluble, giving strongly alkaline solutions. When exposed to moist air, Na2S and its hydrates emit hydrogen sulfide, an extremely toxic, flammable and corrosive gas which smells like rotten eggs.",
+      "applications": [
+        "Chemical processing",
+        "Textile industry",
+        "Paper and pulp",
+        "Leather processing"
+      ],
+      "industries": ["Chemical Processing", "Textile", "Paper & Pulp", "Leather"],
+      "specifications": {
+        "appearance": "Colorless to yellow/brick red crystals",
+        "forms": "Crystalline mass, flakes, or fused solid",
+        "hazard": "Emits toxic hydrogen sulfide gas"
+      }
+    },
+    {
+      "id": "dicalcium-phosphate",
+      "name": "Dicalcium Phosphate",
+      "formula": "CaHPO₄",
+      "image": "assets/images/prodcuts/DICALCIUM_PHOSPHATE.png",
+      "purity": "98%",
+      "grade": "Food/Pharmaceutical Grade",
+      "packaging": "25kg Bags",
+      "shortDescription": "Calcium phosphate used as food additive and in pharmaceutical preparations",
+      "fullDescription": "Dicalcium phosphate is the calcium phosphate with the formula CaHPO4 and its dihydrate. The \"di\" prefix in the common name arises because the formation of the HPO4 2– anion involves the removal of two protons from phosphoric acid, H3PO4. It is also known as dibasic calcium phosphate or calcium monohydrogen phosphate. Dicalcium phosphate is used as a food additive, it is found in some toothpastes as a polishing agent and is a biomaterial. Dibasic calcium phosphate is mainly used as a dietary supplement in prepared breakfast cereals, dog treats, enriched flour, and noodle products. It is also used as a tableting agent in some pharmaceutical preparations, including some products meant to eliminate body odor.",
+      "applications": [
+        "Food additive",
+        "Toothpaste polishing agent",
+        "Dietary supplement in cereals and flour",
+        "Tableting agent in pharmaceuticals",
+        "Body odor elimination products"
+      ],
+      "industries": ["Food Processing", "Pharmaceuticals", "Personal Care"],
+      "specifications": {
+        "alternativeNames": ["Dibasic calcium phosphate", "Calcium monohydrogen phosphate"],
+        "forms": "Anhydrous and dihydrate",
+        "applications": "Food, pharmaceutical, and personal care"
+      }
+    },
+    {
+      "id": "sodium-bi-sulphite",
+      "name": "Sodium Bi Sulphite",
+      "formula": "NaHSO₃",
+      "image": "assets/images/prodcuts/SODIUM_BI_SULPHITE.png",
+      "purity": "95%",
+      "grade": "Food/Industrial Grade",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "Chemical mixture appearing as white/yellowish crystals with sulfur dioxide odor",
+      "fullDescription": "Sodium bisulfite (or sodium bisulphite, sodium hydrogen sulfite) is a chemical mixture with the approximate chemical formula NaHSO3. Sodium bisulfite in fact is not a real compound, but a mixture of salts that dissolve in water to give solutions composed of sodium and bisulfite ions. It appears in form of white or yellowish-white crystals with an odor of sulfur dioxide. Regardless of its ill-defined nature, sodium bisulfite is used in many different industries such as a food additive with E number E222 in the food industry, a reducing agent in the cosmetic industry, and a decomposer of residual hypochlorite used in the bleaching industry.",
+      "applications": [
+        "Food additive (E number E222)",
+        "Reducing agent in cosmetics",
+        "Decomposer of residual hypochlorite in bleaching",
+        "Industrial processing"
+      ],
+      "industries": ["Food Processing", "Cosmetics", "Bleaching", "Chemical Processing"],
+      "specifications": {
+        "appearance": "White or yellowish-white crystals",
+        "odor": "Sulfur dioxide",
+        "eNumber": "E222 (food additive)"
+      }
+    },
+    {
+      "id": "aluminium-hydroxide",
+      "name": "Aluminium Hydroxide",
+      "formula": "Al(OH)₃",
+      "image": "assets/images/prodcuts/ALUMINIUM_HYDROXIDE.png",
+      "purity": "99%",
+      "grade": "Pharmaceutical/Industrial",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "Medication used for acid indigestion management and topical burns",
+      "fullDescription": "Virtually all the aluminium hydroxide used commercially is manufactured by the Bayer process[10] which involves dissolving bauxite in sodium hydroxide at temperatures up to 270 °C (518 °F). The waste solid, bauxite tailings, is removed and aluminium hydroxide is precipitated from the remaining solution of sodium aluminate. This aluminium hydroxide can be converted to aluminium oxide or alumina by calcination. Aluminum hydroxide is a medication used in the management and treatment of acid indigestion. It is in the antacid class of drugs. This activity outlines the indications, action, and contraindications for aluminum hydroxide as a valuable agent in the management of acid indigestion or topical burns. This activity will highlight the mechanism of action, adverse event profile, and other key factors (e.g., off-label uses, dosing, pharmacodynamics, pharmacokinetics, monitoring, relevant interactions) pertinent for members of the healthcare team in the treatment of patients with acid reflux and related conditions.",
+      "applications": [
+        "Antacid for acid indigestion",
+        "Treatment of topical burns",
+        "Conversion to aluminium oxide/alumina",
+        "Pharmaceutical applications"
+      ],
+      "industries": ["Pharmaceuticals", "Chemical Processing", "Medical"],
+      "specifications": {
+        "manufacturingProcess": "Bayer process",
+        "temperature": "Up to 270°C (518°F)",
+        "drugClass": "Antacid"
+      }
+    },
+    {
+      "id": "hydrochloric-acid",
+      "name": "Hydrochloric Acid",
+      "formula": "HCl",
+      "image": "assets/images/prodcuts/HYDROCHLORIC_ACID.png",
+      "purity": "30-35%",
+      "grade": "Commercial Grade",
+      "packaging": "35kg Carboys",
+      "shortDescription": "Strong mineral acid used for neutralization, bleaching, and industrial processes",
+      "fullDescription": "Hydrochloric acid (HCl) is commonly used for the neutralization of alkaline agents, as a bleaching agent, in food, textile, metal, and rubber industries. It is neutralized if released into the soil and it rapidly hydrolyzes when exposed to water.",
+      "applications": [
+        "Neutralization of alkaline agents",
+        "Bleaching agent",
+        "Food industry processing",
+        "Textile industry",
+        "Metal processing",
+        "Rubber industry"
+      ],
+      "industries": ["Chemical Processing", "Food", "Textile", "Metal", "Rubber"],
+      "specifications": {
+        "strength": "30-35% concentration",
+        "behavior": "Rapidly hydrolyzes in water",
+        "environmental": "Neutralized in soil"
+      }
+    },
+    {
+      "id": "sulfuric-acid",
+      "name": "Sulfuric Acid",
+      "formula": "H₂SO₄",
+      "image": "assets/images/prodcuts/SULFURIC_ACID.png",
+      "purity": "98%",
+      "grade": "Battery Grade",
+      "packaging": "35kg Carboys",
+      "shortDescription": "Strong mineral acid with key uses in fertilizers, chemicals, and petroleum refining",
+      "fullDescription": "Sulfuric acid (H2SO4) is a strong mineral acid with key uses in the production of fertilizers, chemicals, explosives and in petroleum refining. It is also used in wastewater processing, mineral extraction, and as an electrolyte in lead-acid batteries.",
+      "applications": [
+        "Production of fertilizers",
+        "Chemical manufacturing",
+        "Explosives production",
+        "Petroleum refining",
+        "Wastewater processing",
+        "Mineral extraction",
+        "Lead-acid battery electrolyte"
+      ],
+      "industries": ["Fertilizers", "Chemical Processing", "Petroleum", "Mining", "Battery"],
+      "specifications": {
+        "strength": "98% concentration",
+        "type": "Strong mineral acid",
+        "primaryUse": "Industrial processing"
+      }
+    },
+    {
+      "id": "sodium-hydroxide",
+      "name": "Sodium Hydroxide",
+      "formula": "NaOH",
+      "image": "assets/images/prodcuts/Sodium_Hydroxide.png",
+      "purity": "99%",
+      "grade": "Technical/Food Grade",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "Popular strong base used in industry, commonly called caustic soda or lye",
+      "fullDescription": "Sodium hydroxide is sometimes called caustic soda or lye. It is a common ingredient in cleaners and soaps. At room temperature, sodium hydroxide is a white, odorless solid. Liquid sodium hydroxide is colorless and has no odor. Sodium hydroxide is a popular strong base used in industry. Sodium hydroxide is used in the manufacture of sodium salts and detergents, pH regulation, and organic synthesis. In bulk, it is most often handled as an aqueous solution, since solutions are cheaper and easier to handle. Other common uses of sodium hydroxide include: for making soaps and detergents. Sodium hydroxide is used for hard bar soap, while potassium hydroxide is used for liquid soaps.[30][31] Sodium hydroxide is used more often than potassium hydroxide because it is cheaper and a smaller quantity is needed.",
+      "applications": [
+        "Manufacturing sodium salts and detergents",
+        "pH regulation",
+        "Organic synthesis",
+        "Making soaps (hard bar soap)",
+        "Industrial cleaning"
+      ],
+      "industries": ["Chemical Processing", "Soap & Detergent", "Food Processing", "Textile"],
+      "specifications": {
+        "appearance": "White, odorless solid at room temperature",
+        "liquidForm": "Colorless, odorless liquid",
+        "advantage": "Cheaper and more efficient than potassium hydroxide"
+      }
+    },
+    {
+      "id": "poly-aluminium-chloride",
+      "name": "Poly Aluminium Chloride",
+      "formula": "PAC",
+      "image": "assets/images/prodcuts/ALUMINIUM_CHLORIDE.png",
+      "purity": "28-30%",
+      "grade": "Industrial Grade",
+      "packaging": "25kg / 50kg Bags",
+      "shortDescription": "High-efficient inorganic polymer coagulant for water treatment applications",
+      "fullDescription": "Polyaluminium chloride (PAC) is a novel high-efficient inorganic polymer coagulant that is produced by the polymerization of aluminium chloride. It is widely used in water treatment, paper making, pharmaceuticals, and cosmetics. PAC is a flocculant and coagulant in water purification, and is also used in the treatment of drinking water, wastewater, and industrial water.",
+      "applications": [
+        "Water treatment and purification",
+        "Paper making",
+        "Pharmaceuticals",
+        "Cosmetics",
+        "Drinking water treatment",
+        "Wastewater treatment",
+        "Industrial water treatment"
+      ],
+      "industries": ["Water Treatment", "Paper & Pulp", "Pharmaceuticals", "Cosmetics"],
+      "specifications": {
+        "type": "Inorganic polymer coagulant",
+        "function": "Flocculant and coagulant",
+        "efficiency": "High-efficient"
+      }
+    }
+  ]
+}

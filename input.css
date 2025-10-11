@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-bg {
+    background-image:
+        linear-gradient(120deg, rgba(37, 99, 235, 0.65) 0%, rgba(253, 224, 71, 0.45) 100%),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1582719471135-c3967ffb1c42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hero spacing tweaks */
+@media (min-width: 1024px) {
+    /* push text slightly left and give more room on the right for the collage */
+    #home .container > div > div.w-full.lg\:w-1\/2:first-child {
+        margin-right: 2rem; /* small spacing when layout is side-by-side */
+    }
+    /* add subtle translate to collage to make it appear more right-aligned */
+    #home .container > div > div.w-full.lg\:w-1\/2:last-child .hidden.lg\:block {
+        transform: translateX(28px);
+    }
+}
