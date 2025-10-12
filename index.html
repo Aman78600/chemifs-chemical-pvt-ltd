@@ -171,7 +171,7 @@
             <div class="loader-ring"></div>
             <div class="loader-ring"></div>
             <div class="loader-text">
-                LOADING<span class="loader-dots">...</span>
+                LOADING...
             </div>
         </div>
     </div>
@@ -612,7 +612,7 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Animal feed, Fertilizer, Food additive, Pharmaceutical
                         </div>
-                        <a href="dicalcium-phosphate.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
+                        <a href="product-details.html?id=dicalcium-phosphate" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
                             More</a>
                     </div>
                 </div>
@@ -626,7 +626,7 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Food preservative, Water treatment, Textile bleaching, Photography
                         </div>
-                        <a href="sodium-bi-sulphite.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
+                        <a href="product-details.html?id=sodium-bi-sulphite" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
                             More</a>
                     </div>
                 </div>
@@ -640,7 +640,7 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Antacid, Flame retardant, Water treatment, Pharmaceutical
                         </div>
-                        <a href="aluminium-hydroxide.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
+                        <a href="product-details.html?id=aluminium-hydroxide" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
                             More</a>
                     </div>
                 </div>
@@ -654,7 +654,7 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Chemical synthesis, pH control, Metal cleaning, Food processing
                         </div>
-                        <a href="hydrochloric-acid.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
+                        <a href="product-details.html?id=hydrochloric-acid" class="text-blue-600 hover:text-blue-700 mt-auto">Learn
                             More</a>
                     </div>
                 </div>
@@ -668,11 +668,11 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Fertilizer production, Chemical synthesis, Battery acid, Industrial cleaning
                         </div>
-                        <a href="sulfuric-acid.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn More</a>
+                        <a href="product-details.html?id=sulfuric-acid" class="text-blue-600 hover:text-blue-700 mt-auto">Learn More</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col" data-aos="fade-up"
-                    data-aos-delay="1700">
+                    data-aos-delay="800">
                     <img src="assets/images/prodcuts/Sodium_Hydroxide.png"
                         alt="Sodium Hydroxide" class="w-full h-48 object-cover">
                     <div class="p-6 flex-1 flex flex-col">
@@ -681,7 +681,7 @@
                             <span class="font-semibold text-blue-700">Key Applications:</span><br>
                             Soap making, Paper making, Water treatment, Chemical synthesis
                         </div>
-                        <a href="sodium-hydroxide.html" class="text-blue-600 hover:text-blue-700 mt-auto">Learn More</a>
+                        <a href="product-details.html?id=sodium-hydroxide" class="text-blue-600 hover:text-blue-700 mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -1448,6 +1448,14 @@
                 if (mobileMenuBtn && mobileMenu) {
                     mobileMenuBtn.addEventListener('click', () => {
                         mobileMenu.classList.toggle('hidden');
+                    });
+                    
+                    // Close mobile menu when clicking on any link
+                    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                    mobileMenuLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.add('hidden');
+                        });
                     });
                 }
             });
