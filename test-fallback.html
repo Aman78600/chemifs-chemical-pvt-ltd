@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Fallback Test - Chemifs Chemical</title>
+    
+    <!-- Test with only fallback CSS (no CDN) -->
+    <link rel="stylesheet" href="assets/css/tailwind-fallback.css">
+    
+    <style>
+        .test-section {
+            border: 3px solid #2563eb;
+            margin-bottom: 2rem;
+        }
+        .status-good { background-color: #dcfce7; color: #16a34a; }
+        .status-warning { background-color: #fef3c7; color: #d97706; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4 text-blue-700 text-center">
+                🧪 Tailwind CSS Fallback Test
+            </h1>
+            <p class="text-center text-gray-600 mb-8">
+                This page uses ONLY the local fallback CSS (no CDN). If it looks good, the fallback is working!
+            </p>
+        </div>
+
+        <!-- Test 1: Layout -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 1: Layout & Grid</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">📦</div>
+                    <p class="font-semibold">Grid Column 1</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">📦</div>
+                    <p class="font-semibold">Grid Column 2</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">📦</div>
+                    <p class="font-semibold">Grid Column 3</p>
+                </div>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If you see 3 columns on desktop and 1 on mobile, the grid works!
+            </p>
+        </div>
+
+        <!-- Test 2: Flexbox -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 2: Flexbox</h2>
+            <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg">
+                <div class="flex items-center">
+                    <span class="text-2xl mr-3">🎯</span>
+                    <span class="font-semibold">Left Aligned</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="font-semibold">Right Aligned</span>
+                    <span class="text-2xl ml-3">🎯</span>
+                </div>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If items are on opposite ends, flexbox works!
+            </p>
+        </div>
+
+        <!-- Test 3: Typography -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 3: Typography</h2>
+            <p class="text-sm mb-2">Small text (text-sm)</p>
+            <p class="text-base mb-2">Base text (text-base)</p>
+            <p class="text-lg mb-2">Large text (text-lg)</p>
+            <p class="text-xl mb-2">Extra large text (text-xl)</p>
+            <p class="text-2xl mb-2">2XL text (text-2xl)</p>
+            <p class="font-medium mb-2">Medium weight</p>
+            <p class="font-semibold mb-2">Semibold weight</p>
+            <p class="font-bold mb-2">Bold weight</p>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If text sizes and weights vary, typography works!
+            </p>
+        </div>
+
+        <!-- Test 4: Colors -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 4: Colors</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-blue-600 text-white p-4 rounded text-center font-semibold">Blue</div>
+                <div class="bg-gray-800 text-white p-4 rounded text-center font-semibold">Gray</div>
+                <div class="bg-green-600 text-white p-4 rounded text-center font-semibold">Green</div>
+                <div class="bg-red-600 text-white p-4 rounded text-center font-semibold">Red</div>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If you see colored boxes, color utilities work!
+            </p>
+        </div>
+
+        <!-- Test 5: Spacing -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 5: Spacing</h2>
+            <div class="space-y-4">
+                <div class="bg-blue-100 p-2 rounded">Padding: p-2</div>
+                <div class="bg-blue-100 p-4 rounded">Padding: p-4</div>
+                <div class="bg-blue-100 p-6 rounded">Padding: p-6</div>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If boxes have different padding sizes, spacing works!
+            </p>
+        </div>
+
+        <!-- Test 6: Borders & Shadows -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 6: Borders & Shadows</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="border-2 border-blue-600 rounded-lg p-4 text-center">
+                    <p class="font-semibold">Border + Rounded</p>
+                </div>
+                <div class="shadow-lg p-4 rounded-lg text-center">
+                    <p class="font-semibold">Shadow Large</p>
+                </div>
+                <div class="shadow-2xl p-4 rounded-2xl text-center">
+                    <p class="font-semibold">Shadow 2XL + Round 2XL</p>
+                </div>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ If you see borders, shadows, and rounded corners, styling works!
+            </p>
+        </div>
+
+        <!-- Test 7: Hover Effects -->
+        <div class="test-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">✅ Test 7: Hover Effects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                    Hover me! (Color change)
+                </button>
+                <button class="bg-gray-600 hover:shadow-xl text-white px-6 py-3 rounded-lg font-semibold transition">
+                    Hover me! (Shadow)
+                </button>
+            </div>
+            <p class="status-good p-3 rounded mt-4 text-center font-semibold">
+                ✓ Hover over buttons to test hover effects!
+            </p>
+        </div>
+
+        <!-- Final Status -->
+        <div class="bg-gradient-to-r from-blue-600 via-fuchsia-500 to-yellow-400 rounded-2xl shadow-2xl p-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">
+                🎉 Fallback CSS Test Complete!
+            </h2>
+            <p class="text-white text-lg mb-4">
+                If all tests above show ✓ and look good, your Tailwind fallback is working perfectly!
+            </p>
+            <p class="text-white font-semibold">
+                Your website will remain beautiful even when the CDN is unavailable.
+            </p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">📋 How to Test CDN Fallback:</h3>
+            <ol class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                    <span>Open your main website (index.html) in a browser</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                    <span>Open DevTools (Press F12)</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                    <span>Go to Network tab → Click "Offline" checkbox</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                    <span>Refresh the page (F5)</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">5</span>
+                    <span>The site should still look good using the fallback CSS!</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Back Button -->
+        <div class="text-center mt-8">
+            <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold shadow-lg transition">
+                ← Back to Main Website
+            </a>
+        </div>
+    </div>
+</body>
+</html>

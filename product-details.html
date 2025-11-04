@@ -5,22 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Product Details - Chemifs Chemical Pvt Ltd</title>
+    
+    <!-- Primary Meta Tags (will be updated dynamically) -->
+    <meta name="description" id="page-description" content="View detailed specifications and applications of our high-quality chemical products. Chemifs Chemical Pvt Ltd - Your trusted chemical supplier.">
+    <meta name="keywords" id="page-keywords" content="chemical product details, industrial chemicals, chemical specifications, chemical applications">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" id="og-url" content="https://chemifschemical.com//product-details.html">
+    <meta property="og:title" id="og-title" content="Product Details - Chemifs Chemical Pvt Ltd">
+    <meta property="og:description" id="og-description" content="View detailed specifications of our high-quality chemical products.">
+    <meta property="og:image" id="og-image" content="https://chemifschemical.com//logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" id="twitter-url" content="https://chemifschemical.com//product-details.html">
+    <meta property="twitter:title" id="twitter-title" content="Product Details - Chemifs Chemical">
+    
+    <!-- Canonical URL (will be updated dynamically) -->
+    <link rel="canonical" id="canonical-url" href="https://chemifschemical.com//product-details.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="input.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap"
-        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with Fallback -->
+    <link rel="stylesheet" href="assets/css/tailwind-fallback.css">
+    <script src="https://cdn.tailwindcss.com" onerror="console.log('Tailwind CDN failed, using fallback CSS')"></script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="input.css">
     <style>
         * {
             font-family: "Amiri", serif;
@@ -155,6 +179,24 @@
                     // Update page title
                     document.getElementById('page-title').textContent = `${product.name} - Chemifs Chemical Pvt Ltd`;
 
+                    // Update meta tags dynamically for SEO
+                    document.getElementById('page-description').setAttribute('content', `${product.name} (${product.formula}) - ${product.shortDescription}. Grade: ${product.grade}, Purity: ${product.purity}. Contact Chemifs Chemical for quality industrial chemicals.`);
+                    document.getElementById('page-keywords').setAttribute('content', `${product.name}, ${product.formula}, ${product.grade}, ${product.industries.join(', ')}, buy ${product.name}`);
+                    
+                    // Update Open Graph tags
+                    const currentUrl = `https://chemifschemical.com//product-details.html?id=${productId}`;
+                    document.getElementById('og-url').setAttribute('content', currentUrl);
+                    document.getElementById('og-title').setAttribute('content', `${product.name} - Chemifs Chemical Pvt Ltd`);
+                    document.getElementById('og-description').setAttribute('content', product.fullDescription);
+                    document.getElementById('og-image').setAttribute('content', `https://chemifschemical.com//${product.image}`);
+                    
+                    // Update Twitter tags
+                    document.getElementById('twitter-url').setAttribute('content', currentUrl);
+                    document.getElementById('twitter-title').setAttribute('content', `${product.name} - Chemifs Chemical`);
+                    
+                    // Update canonical URL
+                    document.getElementById('canonical-url').setAttribute('href', currentUrl);
+
                     // Display product details
                     const productHTML = `
                         <!-- Breadcrumb -->
@@ -214,7 +256,7 @@
                         </div>
 
                         <!-- Applications Section -->
-                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8" data-aos-delay="200">
                             <h2 class="text-3xl font-bold mb-6 text-gray-800">
                                 <svg class="inline-block w-8 h-8 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 

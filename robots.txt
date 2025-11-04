@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://chemifschemical.com//sitemap.xml
+
+# Disallow specific files if needed
+Disallow: /assets/css/tailwind-fallback.css
+Disallow: /products-data.json
+
+# Crawl-delay
+Crawl-delay: 10
