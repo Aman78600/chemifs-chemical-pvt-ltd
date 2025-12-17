@@ -30,7 +30,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault();
 
     // Initialize EmailJS with your public key
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+    emailjs.init('EgPzrBz3_2Gh0J6RE'); // Replace with your actual public key
 
     const formData = new FormData(this);
     const templateParams = {
@@ -42,7 +42,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         to_email: 'chemifschemical@gmail.com'
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams) // Replace with your service ID and template ID
+    emailjs.send('service_0yc8hc7', 'template_ntqw25h', templateParams) // Replace with your service ID and template ID
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Message sent successfully!');
