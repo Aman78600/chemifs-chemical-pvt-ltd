@@ -53,7 +53,7 @@ if (contactForm) {
             from_phone: formData.get('phone'),
             subject: formData.get('subject') || 'General Inquiry',
             message: formData.get('message'),
-            to_email: 'chemifschemical@gmail.com'
+            to_email: 'chemifschemicalweb@gmail.com'
         };
 
         emailjs.send('service_0yc8hc7', 'template_ntqw25h', templateParams)
