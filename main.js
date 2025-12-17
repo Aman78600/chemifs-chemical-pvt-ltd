@@ -39,7 +39,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         from_email: formData.get('email'),
         from_phone: formData.get('phone'),
         message: formData.get('message'),
-        to_email: 'chemifschemical@gmail.com'
+        to_email: 'chemifschemicalweb@gmail.com'
     };
 
     emailjs.send('service_0yc8hc7', 'template_ntqw25h', templateParams) // Replace with your service ID and template ID
@@ -64,4 +64,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+
 });
